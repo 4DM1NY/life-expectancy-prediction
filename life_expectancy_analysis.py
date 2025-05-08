@@ -1,19 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[43]:
-
 
 ####### Projet IA - Analyse Démographique et Prédiction de l’Espérance de Vie ######
-
-# École : HESTIM  &  INSA Hauts-de-France
-# Nom et Prénom : YLEWO Arrolle Içaire  
-# Unité d'enseignement :  Intelligence Artificielle  
-# Année académique : 2024-2025  
-# Classe : Master 2 Cyberdéfense & Sécurité de l'Information (CDSI)
-
-
-# In[44]:
 
 
 # 1. Introduction & Objectifs
@@ -35,14 +24,9 @@
 # globaux liés à la qualité de vie des populations.
 
 
-# In[45]:
-
+#####################################################################################################################
 
 # 2. Importation des Bibliothèques
-
-
-# In[46]:
-
 
 import pandas as pd
 import numpy as np
@@ -60,17 +44,13 @@ from sklearn.cluster import KMeans
 from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
 
 
-# In[47]:
 
-
+#####################################################################################################################
 # 3. & Chargement des Données & Description du Dataset
 
 # source : https://www.kaggle.com/datasets/nelgiriyewithana/countries-of-the-world-2023/data
 # Ce dataset mondial contient des informations variées sur chaque pays : 
 # indicateurs démographiques, économiques, sanitaires, éducatifs, etc.
-
-
-# In[48]:
 
 
 #importation du dataset
@@ -114,17 +94,12 @@ plt.tight_layout()
 plt.show()
 
 
-# In[49]:
-
-
+#####################################################################################################################
 # 4. Prétraitement des Données
 #  Suppression ou imputation des valeurs manquantes
 #  Encodage des variables catégorielles (si besoin)
 #  Normalisation / Standardisation
 #  Sauvegarde du dataset nettoyé (optionnel)
-
-
-# In[50]:
 
 
 ## Nettoyage des valeurs 
@@ -180,9 +155,7 @@ missing_values = df.isnull().sum()
 print("Valeurs manquantes :\n", missing_values[missing_values > 0])
 
 
-# In[51]:
-
-
+#####################################################################################################################
 # 5. Analyse Exploratoire des Données (EDA)
 # Heatmap de corrélation
 # Scatterplots : Life Expectancy vs autres variables
@@ -195,9 +168,6 @@ print("Valeurs manquantes :\n", missing_values[missing_values > 0])
 # Boxplots : Compare l'espérance de vie par catégories (continent, groupe de revenus, etc.).
 # Pairplot : Explore les relations multivariées entre l'espérance de vie et les variables influentes.
 # Régression linéaire multiple : Prédit l'espérance de vie en fonction des variables les plus corrélées.
-
-
-# In[52]:
 
 
 # Heatmap de corrélation
@@ -298,18 +268,14 @@ print(model.summary())
 
 
 
-# In[53]:
 
-
+#####################################################################################################################
 # 6. Clustering (Non Supervisé)
 # Standardisation des données
 # Application du PCA (visualisation 2D)
 # K-Means : choix du nombre optimal de clusters (méthode du coude)
 # Hierarchical Clustering + Dendrogramme
 # Interprétation des clusters obtenus
-
-
-# In[54]:
 
 
 # ========= Normalisation (StandardScaler) =========
@@ -393,9 +359,9 @@ plt.grid(True)
 plt.show()
 
 
-# In[55]:
 
 
+#####################################################################################################################
 # 7. Modélisation Prédictive (Régression)
 # Définir X (features) et y (target = Life Expectancy)
 # Séparation train/test
@@ -406,8 +372,6 @@ plt.show()
 # RMSE, MAE, R²
 # Graphique : prédictions vs valeurs réelles
 
-
-# In[56]:
 
 
 # Sélectionner les variables explicatives (features) et la variable cible (target)
@@ -480,9 +444,7 @@ plt.tight_layout()
 plt.show()
 
 
-# In[57]:
-
-
+#####################################################################################################################
 # Conclusion :
 
 # Ce projet a permis de prédire l'espérance de vie par pays en utilisant des données démographiques,
@@ -493,8 +455,6 @@ plt.show()
 # d'intelligence artificielle à un problème concret et met en évidence l'importance d'une bonne préparation 
 # des données pour obtenir des résultats fiables.
 
-
-# In[ ]:
 
 
 
