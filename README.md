@@ -9,7 +9,7 @@ This project applies machine learning to analyze demographic, health, and socio-
 
 ## 📁 Project Structure
 - `world-data-2023.csv`: contains raw and processed datasets. ( link src : https://www.kaggle.com/datasets/nelgiriyewithana/countries-of-the-world-2023/data )
-- `src/`: contains the main analysis and modeling script.
+- `life_expectancy_analysis.py`: contains the main analysis and modeling script.
 - `requirements.txt`: lists all Python dependencies.
 
 ## 🚀 How to Run
